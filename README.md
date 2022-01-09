@@ -10,3 +10,55 @@ Recent growth in nutrition-related diseases globally has increased awareness of 
 
 ## Goal
 To beat the original results of the [Food101](https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/) paper and beating [DeepFood](https://www.researchgate.net/publication/304163308_DeepFood_Deep_Learning-Based_Food_Image_Recognition_for_Computer-Aided_Dietary_Assessment), a 2016 paper that used a Convolutional Neural Network trained for 2-3 days to achieve 77,4% top-1 accuracy.
+
+## Project Main Steps:
+
+- Use TensorFlow Datasets to Download Data
+- Exploring the Food101 data from TensorFlow Datasets
+- Plot an image from TensorFlow Datasets
+- Create preprocessing functions for our data
+- Batch & prepare datasets
+- Create modelling callbacks
+- Build feature extraction model
+- Fit the feature extraction model
+- [View training results on TensorBoard](https://tensorboard.dev/experiment/5sNyi2UKSJiYszbqp0pu9A/#scalars)
+
+## Modeling
+
+### 1. Feature Extraction
+
+
+
+| Epoch | Accuracy |
+|-------|----------|
+| 1     | 67.9%    |
+| 2     | 69.3%    |
+| 3     | 71.5%    |
+
+
+### 2. Fine-tuning
+| Epoch | Accuracy |
+|-------|----------|
+| 1     | 77.6%    |
+| 2     | 77.9%    |
+| 3     | 78.8%    |
+| 4     | 78.95%   |
+| 5     | 80.35%   |
+
+### Final model
+
+| Final Evaluate |        |
+|----------------|--------|
+| Accuracy       | 79.85% |
+
+
+## Conclusion
+
+We Built a feature extraction from EfficientNetB0 model and achieved 70,87 % accuracy after three epochs and tried fine-tuning the model, and the accuracy increased to 79,85%. This beats the original results of the Food101 paper, With an average accuracy of 50.76%, and beating the DeepFood, a 2016 paper that used a Convolutional Neural Network trained for 2-3 days to achieve 77.4% top-1 accuracy.
+
+
+## Technologies Used
+
+![](https://forthebadge.com/images/badges/made-with-python.svg)
+
+[<img target="_blank" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/NumPy_logo_2020.svg/440px-NumPy_logo_2020.svg.png" width=150>](https://numpy.org/) [<img target="_blank" src="https://camo.githubusercontent.com/aeb4f612bd9b40d81c62fcbebd6db44a5d4344b8b962be0138817e18c9c06963/68747470733a2f2f7777772e74656e736f72666c6f772e6f72672f696d616765732f74665f6c6f676f5f686f72697a6f6e74616c2e706e67" width=200>](https://www.tensorflow.org/) [<img target="_blank" src="https://matplotlib.org/stable/_static/logo2.svg" width=100 height=50>](https://matplotlib.org/)
